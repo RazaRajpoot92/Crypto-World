@@ -46,13 +46,13 @@ const CoinDetails = ()=>{
             {
                 loading?(<Loader />):(
                     <>
-                    <Box w={"full"} borderWidth={1}>
+                    {/* <Box w={"full"} borderWidth={1}>
                         lkj
 
                     </Box>
 
 
-                    {}
+                    {} */}
 
                     <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
                         <HStack spacing={"4"}>
@@ -102,7 +102,12 @@ const CoinDetails = ()=>{
 
 
                       <Box w={"full"} p={"4"}>
-                        <Item title={"Max Supply"} value={2122} />
+                        <Item title={"Max Supply"} value={coin.market_data.max_supply} />
+                        <Item title={"Circulating Supply"} value={coin.market_data.circulating_supply} />
+                        <Item title={"Market Cap"} value={`${currencySymbol}${coin.market_data.market_cap[currency]}`} />
+                        <Item title={"All Time High"} value={`${currencySymbol}${coin.market_data?.ath[currency]}`} />
+                        <Item title={"All Time Low"} value={`${currencySymbol}${coin.market_data?.atl[currency]}`} />
+
                       </Box>
 
                     </VStack>
