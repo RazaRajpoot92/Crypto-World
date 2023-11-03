@@ -32,7 +32,7 @@ const Exchanges = () => {
 
     },[])
 
-   
+
     if(err) return <ErroComponent message={"Error while fetching data"} />
 
 
@@ -46,6 +46,7 @@ const Exchanges = () => {
 
                 <ExchangeCard
                 id={i.id}
+                key={i.id}
                 name={i.name}
                 img={i.image}
                 url={i.url}

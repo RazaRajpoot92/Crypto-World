@@ -22,7 +22,7 @@ const CoinDetails = ()=>{
             const {data} = await axios.get(`${server}/coins/${params.id}`)
 
             setCoin(data)
-            console.log(data)
+            
             setLoading(false)
 
            }

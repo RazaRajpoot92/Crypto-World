@@ -7,7 +7,7 @@ const Home = ()=>{
     return(
         <Box bgColor={"blackAlpha.900"} w={"full"} h={"85vh"}>
 
-        
+
             <motion.div style={{
                 height:"80vh"
             }}
@@ -16,7 +16,7 @@ const Home = ()=>{
              }}
 
              transition={{
-                duration:2,
+                duration:1,
                 repeat:Infinity,
                 repeatType:"reverse"
              }}
